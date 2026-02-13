@@ -12,13 +12,28 @@
   "bugs": {
     "url": "https://github.com/ccwq/ez-modal/issues"
   },
-  "main": "./src/EZModal.tsx",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
-    "src",
-    "docs",
+    "dist",
     "README.md"
   ],
   "scripts": {
+    "clean": "rimraf dist coverage",
+    "dev": "npm run docs:dev",
+    "build": "npm run clean && vite build && tsc -p tsconfig.build.json --emitDeclarationOnly",
+    "demo": "npm run docs:dev",
+    "demo:build": "npm run docs:build",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
@@ -27,8 +42,14 @@
     "vue": "^3.4.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^5.1.1",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^26.1.0",
+    "rimraf": "^6.0.1",
+    "vite": "^6.3.6",
     "typescript": "^5.6.3",
     "vitepress": "^1.6.4",
+    "vitest": "^2.1.9",
     "vue": "^3.5.0"
   }
 }

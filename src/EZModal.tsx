@@ -33,7 +33,7 @@
  * - .EZModal__footer - 底部区域
  */
 
-import { useGradAlphaMask } from '@/hooks/useGradAlphaMask'
+import { useGradAlphaMask } from './hooks/useGradAlphaMask'
 import {
   defineComponent,
   ref,
