@@ -1,0 +1,34 @@
+{
+  "name": "ez-modal",
+  "version": "0.1.0",
+  "description": "A reusable Vue 3 modal component with programmatic API.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccwq/ez-modal.git"
+  },
+  "homepage": "https://github.com/ccwq/ez-modal",
+  "bugs": {
+    "url": "https://github.com/ccwq/ez-modal/issues"
+  },
+  "main": "./src/EZModal.tsx",
+  "files": [
+    "src",
+    "docs",
+    "README.md"
+  ],
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.0"
+  }
+}
